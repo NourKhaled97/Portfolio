@@ -1,31 +1,22 @@
 import { FC } from 'react';
 import Project from '../components/Project';
+import LaCouronneHotel from '../assets/LaCouronneHotel.png';
+import Title from '../components/Title';
 
-const styles = {
+const styles: Record<string, React.CSSProperties> = {
     container: {
-        padding: '0px 60px 50px',
+        marginTop: '100px',
+        marginBottom: '100px',
     },
 };
 
 const projects = [
     {
-        name: 'Project 1',
+        name: 'La Couronne Hotel',
         description: 'This is the first project for me, I am so proud to publish it and make such an incredible website',
-        image: '',
-        link: '',
-        githubLink: '',
-    }, {
-        name: 'Project 2',
-        description: 'This is the first project for me, I am so proud to publish it and make such an incredible website',
-        image: '',
-        link: '',
-        githubLink: '',
-    }, {
-        name: 'Project 3',
-        description: 'This is the first project for me, I am so proud to publish it and make such an incredible website',
-        image: '',
-        link: '',
-        githubLink: '',
+        image: LaCouronneHotel,
+        link: 'https://banguihotels-batiloc.netlify.app/',
+        githubLink: 'https://github.com/NourKhaled97/La-Couronne-Hotels/tree/main',
     },
 ]
 
@@ -34,19 +25,24 @@ const Projects: FC = () => {
     const classes = styles;
 
     return (
-        <div style={classes.container}>
-            <h1>Projects</h1>
-            <div style={{display:'flex', gap:'20px'}}>
+        <div style={classes.container} className='container'>
+            <Title text='Projects'/>
+            <div className='row'>
                 {projects.map((project, index) => {
                     return (
-                        <Project
+                        <div
                             key={index}
-                            name={project.name}
-                            description={project.description}
-                            image={project.image}
-                            link={project.link}
-                            githubLink={project.githubLink}
-                        />
+                            className='col-md-6'
+                        >
+                            <Project
+                                name={project.name}
+                                description={project.description}
+                                image={project.image}
+                                link={project.link}
+                                githubLink={project.githubLink}
+                            />
+                        </div>
+
                     )
                 })}
             </div>

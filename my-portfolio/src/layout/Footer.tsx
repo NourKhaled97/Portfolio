@@ -1,36 +1,34 @@
 import { FC } from 'react';
-import HeaderTab from '../components/HeaderTab';
+import FooterImg from '../assets/footer.png';
 
 const styles = {
   container: {
     display: 'flex',
-    padding: '10px 60px',
-    backgroundColor:'black',
-    justifyContent: 'end',
+    padding: '30px 60px 0px',
+    backgroundColor: '#083344',
+    justifyContent: 'center',
   },
-  image: {
+  text: {
+    width: '750px',
     display: 'flex',
-    flex: '1',
-  },
-  tabs: {
-    color: 'red',
-    display: 'flex',
-    gap: '24px',
-    alignSelf: 'center',
+    alignItems: 'center',
+    marginLeft: '50px'
   }
 };
-
-const tabs = ["About", "Skills", "Projects", "Experience", "Contact"];
 
 const Footer: FC = () => {
   const classes = styles;
 
   return (
     <footer style={classes.container}>
-      <div style={classes.tabs}>
-        {tabs.map((tab, index) => {
-          return <HeaderTab key={index} title={tab} />
-        })}
+      <img src={FooterImg} alt='Github' width={350} height={200} />
+
+      <div style={classes.text}>
+        <p>
+          Thank you for taking the time to explore my portfolio. I hope you found my work
+          and experience engaging and insightful. I am enthusiastic about the possibility
+          of collaborating with you and contributing to exciting and innovative projects.
+        </p>
       </div>
     </footer>
   );
