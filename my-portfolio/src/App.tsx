@@ -1,6 +1,7 @@
-import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
+
+// import Loading from './components/Loading';
+
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import IntroduceMyself from './sections/IntroduceMyself';
@@ -12,32 +13,137 @@ import ContactMe from './sections/ContactMe';
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.tsx</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <>
       <Header />
       <IntroduceMyself />
-      <About />
-      <Skills />
-      <Projects />
-      <Experiences />
-      <ContactMe />
+      <div id='about'>
+        <About />
+      </div>
+      <div id='skills'>
+        <Skills />
+      </div>
+      <div id='projects'>
+        <Projects />
+      </div>
+      <div id='experiences'>
+        <Experiences />
+      </div>
+      <div id='contactMe'>
+        <ContactMe />
+      </div>
       <Footer />
     </>
+    // <BrowserRouter>
+    //   <ScrollToTop />
+    //   <Header />
+    //   <Routes>
+    //     <Route
+    //       path='/'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <IntroduceMyself />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/about'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <About />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/skills'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <Skills />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/projects'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <Projects />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/experiences'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <Experiences />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/contactMe'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <ContactMe />
+    //         </Suspense>
+    //       }
+    //     />
+    //   </Routes>
+    //   <Footer />
+    // </BrowserRouter>
+
+    // <BrowserRouter>
+    //   <ScrollToTop />
+    //   <Header />
+    //   <Routes>
+    //     <Route
+    //       path='/'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <IntroduceMyself />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/about'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <About />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/rooms'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <Skills />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/services'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <Projects />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/contactus'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <Experiences />
+    //         </Suspense>
+    //       }
+    //     />
+    //     <Route
+    //       path='/booking'
+    //       element={
+    //         <Suspense fallback={<Loading />}>
+    //           <ContactMe />
+    //         </Suspense>
+    //       }
+    //     />
+    //   </Routes>
+    //   <Footer />
+    // </BrowserRouter>
   );
 }
 
